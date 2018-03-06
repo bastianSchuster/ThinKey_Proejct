@@ -14,23 +14,49 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final EditText txt =(EditText) findViewById(R.id.firstText);
+        final TextView txt =(TextView) findViewById(R.id.Headline);
 
+        Button levels =  (Button) findViewById(R.id.levels);
+        levels.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Levels",Toast.LENGTH_LONG).show();
+                openSettings();
 
-        Button btn= (Button) findViewById(R.id.btn_play);
-        btn.setOnClickListener(new View.OnClickListener() {
+            }
+        });
+
+        ImageButton settings=(ImageButton) findViewById(R.id.settings);
+        settings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(),"Settings",Toast.LENGTH_LONG).show();
+                openSettings();
+
+            }
+        });
+        ImageButton play= (ImageButton) findViewById(R.id.start);
+        play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"First Level",Toast.LENGTH_LONG).show();
-                openActivity();
-                txt.setText("Test");
+                openLevel();
+
             }
         });
     }
 
+    public void openLevels(){
+        Intent intent= new Intent(this,Levels.class);
+        startActivity(intent);
+    }
 
+    public void openSettings(){
+        Intent intent = new Intent(this,Settings.class);
+        startActivity(intent);
+    }
 
-    public void openActivity(){
+    public void openLevel(){
         Intent intent= new Intent(this,Level1.class);
         startActivity(intent);
     }
