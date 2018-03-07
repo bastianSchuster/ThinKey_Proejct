@@ -40,7 +40,6 @@
             android:textSize="280px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/relativeLayout2"
             app:layout_constraintTop_toTopOf="parent" />
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

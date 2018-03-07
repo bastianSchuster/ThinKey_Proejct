@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"Levels",Toast.LENGTH_LONG).show();
-                openSettings();
+                openLevels();
 
             }
         });
@@ -46,18 +46,20 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public void openLevel(){
+        Intent intent3= new Intent(this,Level1.class);
+        startActivity(intent3);
+    }
+
     public void openLevels(){
         Intent intent= new Intent(this,Levels.class);
         startActivity(intent);
     }
 
     public void openSettings(){
-        Intent intent = new Intent(this,Settings.class);
-        startActivity(intent);
+        Intent intent2 = new Intent(this,Settings.class);
+        startActivity(intent2);
     }
 
-    public void openLevel(){
-        Intent intent= new Intent(this,Level1.class);
-        startActivity(intent);
-    }
+
 }
