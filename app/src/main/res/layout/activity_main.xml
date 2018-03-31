@@ -52,8 +52,8 @@
 
     <ImageButton
         android:id="@+id/settings"
-        android:layout_width="250px"
-        android:layout_height="250px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginEnd="250dp"
         android:layout_marginStart="24dp"

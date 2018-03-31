@@ -22,8 +22,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"Levels",Toast.LENGTH_LONG).show();
-                openLevels();
-
+                Intent intent= new Intent(MainActivity.this,   Level1.class);
+                startActivity(intent);
             }
         });
 
@@ -32,35 +32,23 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"Settings",Toast.LENGTH_LONG).show();
-                openSettings();
-
+                Intent intentSetting = new Intent (MainActivity.this,Settings.class);
+                startActivity(intentSetting);
             }
         });
+        
         ImageButton play= (ImageButton) findViewById(R.id.start);
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"First Level",Toast.LENGTH_LONG).show();
-                openLevel();
-
+                Intent intentLevel1= new Intent(MainActivity.this,Level1.class);
+                startActivity(intentLevel1);
             }
         });
     }
 
-    public void openLevel(){
-        Intent intent3= new Intent(this,Level1.class);
-        startActivity(intent3);
-    }
 
-    public void openLevels(){
-        Intent intent= new Intent(this,Levels.class);
-        startActivity(intent);
-    }
-
-    public void openSettings(){
-        Intent intent2 = new Intent(this,Settings.class);
-        startActivity(intent2);
-    }
 
 
 }
