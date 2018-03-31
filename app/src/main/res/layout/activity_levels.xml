@@ -45,7 +45,7 @@
         android:layout_marginTop="30dp"
         android:text="Level"
         android:textColor="@android:color/white"
-        android:textSize="280px"
+        android:textSize="150px"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.54"
