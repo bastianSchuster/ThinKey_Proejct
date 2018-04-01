@@ -26,7 +26,7 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
-        ImageButton red = (ImageButton) findViewById(R.id.imageButton);
+        //ImageButton red = (ImageButton) findViewById(R.id.imageButton);
         EditText text = (EditText) findViewById(R.id.editText);
         RadioButton r1= (RadioButton) findViewById(R.id.radioButton);
         r1.setOnClickListener(new View.OnClickListener() {
