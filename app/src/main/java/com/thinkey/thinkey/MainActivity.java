@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getApplicationContext(),"Levels",Toast.LENGTH_LONG).show();
-                Intent intent= new Intent(MainActivity.this,   Level1.class);
+                Intent intent= new Intent(MainActivity.this,   Levels.class);
                 startActivity(intent);
             }
         });

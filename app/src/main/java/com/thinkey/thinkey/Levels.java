@@ -11,7 +11,7 @@ public class Levels extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_level1);
+        setContentView(R.layout.activity_levels);
 
         Button btn= (Button) findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
