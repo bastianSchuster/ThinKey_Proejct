@@ -13,7 +13,7 @@ public class Levels extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levels);
 
-        Button btn= (Button) findViewById(R.id.button);
+        Button btn= (Button) findViewById(R.id.confirm);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".Level1" />
         <activity android:name=".Settings" />
-        <activity android:name=".Levels"></activity>
+        <activity android:name=".Levels" />
     </application>
 
 </manifest>

@@ -3,7 +3,6 @@ package com.thinkey.thinkey;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -15,7 +14,7 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        Button btn= (Button) findViewById(R.id.button);
+        Button btn= (Button) findViewById(R.id.confirm);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
