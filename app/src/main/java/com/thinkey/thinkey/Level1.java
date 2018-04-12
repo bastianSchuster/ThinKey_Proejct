@@ -101,6 +101,8 @@ public class Level1 extends AppCompatActivity {
                     Intent intent = new Intent(Level1.this,WinnerScreen.class);
                     startActivity(intent);
                     blau.setChecked(false);
+                    Intent i = new Intent(Level1.this,Level2.class);
+                    startActivity(i);
                 }
                 if(rot.isChecked()){
                     Toast.makeText(getApplicationContext(),"Falsch",Toast.LENGTH_SHORT).show();
