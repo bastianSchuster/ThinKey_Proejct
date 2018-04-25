@@ -5,21 +5,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class Settings extends AppCompatActivity {
+public class Level2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_level2);
 
-        Button btn= (Button) findViewById(R.id.confirm);
+        Button btn = (Button) findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Start",Toast.LENGTH_LONG).show();
-                openActivity();
+                Intent i = new Intent(Level2.this,MainActivity.class);
+                startActivity(i);
             }
         });
 
@@ -31,10 +30,6 @@ public class Settings extends AppCompatActivity {
                 | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
                 | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                 | View.SYSTEM_UI_FLAG_IMMERSIVE);
-    }
 
-    public void openActivity(){
-        Intent intent= new Intent(this,MainActivity.class);
-        startActivity(intent);
     }
 }

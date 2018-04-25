@@ -1,5 +1,6 @@
 package com.thinkey.thinkey;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.*;
@@ -21,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
         levels.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                setContentView(R.layout.activity_levelauswahl);
+                Toast.makeText(getApplicationContext(),"Levels",Toast.LENGTH_LONG).show();
+                Intent intent= new Intent(MainActivity.this,   Levels.class);
+                startActivity(intent);
             }
         });
 
@@ -44,6 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentLevel1);
             }
         });
+
+        View decorView = getWindow().getDecorView();
+
+        decorView.setSystemUiVisibility( View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                | View.SYSTEM_UI_FLAG_IMMERSIVE);
+
     }
 
 
