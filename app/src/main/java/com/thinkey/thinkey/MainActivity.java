@@ -21,9 +21,7 @@ public class MainActivity extends AppCompatActivity {
         levels.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Levels",Toast.LENGTH_LONG).show();
-                Intent intent= new Intent(MainActivity.this,   Level1.class);
-                startActivity(intent);
+                setContentView(R.layout.activity_levelauswahl);
             }
         });
 
