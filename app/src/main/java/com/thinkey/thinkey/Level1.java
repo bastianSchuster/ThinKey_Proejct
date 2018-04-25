@@ -13,120 +13,39 @@ import android.widget.Toast;
 
 public class Level1 extends AppCompatActivity {
 
-    private RadioButton rot;
-    private RadioButton blau;
-    private RadioButton gruen;
-    private RadioButton schwarz;
+
     private Button btn;
+    private Button schwarz,rot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
 
-        rot= (RadioButton) findViewById(R.id.rot);
-        blau= (RadioButton) findViewById(R.id.blau);
-        gruen= (RadioButton) findViewById(R.id.gruen);
-        schwarz= (RadioButton) findViewById(R.id.schwarz);
+
         btn= (Button) findViewById(R.id.confirm);
+        schwarz=(Button) findViewById(R.id.Schwarz);
+        rot=(Button) findViewById(R.id.Rot);
 
 
 
 
 
+
+        schwarz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(Level1.this, WinnerScreen.class);
+                startActivity(intent);
+                Intent i = new Intent(Level1.this, Level2.class);
+                startActivity(i);
+            }
+        });
         rot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(blau.isChecked()){
-                    blau.setChecked(false);
-                }
-                if(gruen.isChecked()){
-                    gruen.setChecked(false);
-                }
-                if(schwarz.isChecked()){
-                    schwarz.setChecked(false);
-                }
-            }
-        });
-        blau.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(rot.isChecked()){
-                    rot.setChecked(false);
-                }
-                if(gruen.isChecked()){
-                    gruen.setChecked(false);
-                }
-                if(schwarz.isChecked()){
-                    schwarz.setChecked(false);
-                }
-            }
-        });
-        gruen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(blau.isChecked()){
-                    blau.setChecked(false);
-                }
-                if(rot.isChecked()){
-                    rot.setChecked(false);
-                }
-                if(schwarz.isChecked()){
-                    schwarz.setChecked(false);
-                }
-            }
-        });
-        schwarz.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(blau.isChecked()){
-                    blau.setChecked(false);
-                }
-                if(gruen.isChecked()){
-                    gruen.setChecked(false);
-                }
-                if(rot.isChecked()){
-                    rot.setChecked(false);
-                }
-            }
-        });
-
-
-        Button confirm=(Button) findViewById(R.id.confirm);
-        confirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(blau.isChecked()){
-                    Toast.makeText(getApplicationContext(),"Richtig",Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(Level1.this,WinnerScreen.class);
-                    startActivity(intent);
-                    blau.setChecked(false);
-                    Intent i = new Intent(Level1.this,Level2.class);
-                    startActivity(i);
-                }
-                if(rot.isChecked()){
-                    Toast.makeText(getApplicationContext(),"Falsch",Toast.LENGTH_SHORT).show();
-                    Intent gameover= new Intent(Level1.this,GameOver.class);
-                    startActivity(gameover);
-                    rot.setChecked(false);
-                }
-                if(gruen.isChecked()){
-                    Toast.makeText(getApplicationContext(),"Falsch",Toast.LENGTH_SHORT).show();
-                    Intent gameover= new Intent(Level1.this,GameOver.class);
-                    startActivity(gameover);
-                    getWindow().setFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND,
-                            WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
-                    gruen.setChecked(false);
-                }
-                if(schwarz.isChecked()){
-                    Toast.makeText(getApplicationContext(),"Falsch",Toast.LENGTH_SHORT).show();
-                    Intent gameover= new Intent(Level1.this,GameOver.class);
-                    startActivity(gameover);
-                    getWindow().setFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND,
-                            WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
-                    schwarz.setChecked(false);
-                }
-
+                Intent intent = new Intent(Level1.this, GameOver.class);
+                startActivity(intent);
             }
         });
 
