@@ -22,8 +22,7 @@ public class MainActivity extends AppCompatActivity {
         levels.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Levels",Toast.LENGTH_LONG).show();
-                Intent intent= new Intent(MainActivity.this,   Levels.class);
+                Intent intent= new Intent(MainActivity.this,Levelauswahl.class);
                 startActivity(intent);
             }
         });
@@ -32,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Settings",Toast.LENGTH_LONG).show();
                 Intent intentSetting = new Intent (MainActivity.this,Settings.class);
                 startActivity(intentSetting);
             }
@@ -42,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"First Level",Toast.LENGTH_LONG).show();
                 Intent intentLevel1= new Intent(MainActivity.this,Level1.class);
                 startActivity(intentLevel1);
             }
