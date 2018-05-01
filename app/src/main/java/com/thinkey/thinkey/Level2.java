@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import java.util.logging.Level;
 
 public class Level2 extends AppCompatActivity {
 
@@ -22,8 +25,20 @@ public class Level2 extends AppCompatActivity {
             }
         });
 
-        View decorView = getWindow().getDecorView();
 
+        EditText t= (EditText) findViewById(R.id.edit);
+        t.getText();
+
+        if(t.getText().equals("25")){
+            Intent intent = new Intent(Level2.this, WinnerScreen.class);
+            startActivity(intent);
+            Intent i = new Intent(Level2.this, Level2.class);
+            startActivity(i);
+        }
+
+
+
+        View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility( View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                 | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
