@@ -37,8 +37,7 @@ public class Level1 extends AppCompatActivity {
             public void onClick(View view){
                 Intent intent = new Intent(Level1.this, WinnerScreen.class);
                 startActivity(intent);
-                Intent i = new Intent(Level1.this, Level2.class);
-                startActivity(i);
+
             }
         });
         rot.setOnClickListener(new View.OnClickListener() {

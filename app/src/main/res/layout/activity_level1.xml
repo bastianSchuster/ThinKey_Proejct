@@ -72,7 +72,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="15dp"
-        android:text="Level"
+        android:text="LOGIK"
         android:textColor="@android:color/white"
         android:textSize="150px"
         app:layout_constraintEnd_toEndOf="parent"

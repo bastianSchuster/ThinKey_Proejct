@@ -25,7 +25,11 @@
         <activity
             android:name=".WinnerScreen"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".Level2"></activity>
+        <activity android:name=".Level2" />
+        <activity android:name=".Level3" />
+        <activity
+            android:name=".WinnerScreen2"
+            android:theme="@style/AppTheme.CustomTheme" />
     </application>
 
 </manifest>

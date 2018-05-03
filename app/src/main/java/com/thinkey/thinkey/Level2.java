@@ -6,15 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.util.logging.Level;
 
 public class Level2 extends AppCompatActivity {
 
+
+    Button correct,btn2,btn3,btn4;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level2);
+
 
         Button btn = (Button) findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -26,16 +32,43 @@ public class Level2 extends AppCompatActivity {
         });
 
 
-        EditText t= (EditText) findViewById(R.id.edit);
-        t.getText();
+        correct = (Button) findViewById(R.id.btn2);
+        btn2 = (Button) findViewById(R.id.btn);
+        btn3 = (Button) findViewById(R.id.btn3);
+        btn4 = (Button) findViewById(R.id.btn4);
 
-        if(t.getText().equals("25")){
-            Intent intent = new Intent(Level2.this, WinnerScreen.class);
-            startActivity(intent);
-            Intent i = new Intent(Level2.this, Level2.class);
-            startActivity(i);
-        }
 
+        correct.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Level2.this, WinnerScreen2.class);
+                startActivity(intent);
+            }
+        });
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Level2.this,GameOver.class);
+                startActivity(intent);
+            }
+        });
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Level2.this, GameOver.class);
+                startActivity(intent);
+            }
+        });
+
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Level2.this, GameOver.class);
+                startActivity(intent);
+            }
+        });
 
 
         View decorView = getWindow().getDecorView();
