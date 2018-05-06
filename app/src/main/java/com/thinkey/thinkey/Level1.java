@@ -1,21 +1,18 @@
 package com.thinkey.thinkey;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.Toast;
+import android.widget.ImageButton;
 
 public class Level1 extends AppCompatActivity {
 
 
     private Button btn;
     private Button schwarz,rot;
+    ImageButton pause;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,13 +20,19 @@ public class Level1 extends AppCompatActivity {
         setContentView(R.layout.activity_level1);
 
 
+        this.pause =(ImageButton) findViewById(R.id.pause);
         btn= (Button) findViewById(R.id.confirm);
         schwarz=(Button) findViewById(R.id.Schwarz);
         rot=(Button) findViewById(R.id.Rot);
 
 
-
-
+        this.pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Level1.this, Pause.class);
+                startActivity(i);
+            }
+        });
 
 
         schwarz.setOnClickListener(new View.OnClickListener() {
@@ -48,13 +51,6 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
-        Button back =(Button) findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openActivity();
-            }
-        });
 
         View decorView = getWindow().getDecorView();
 
@@ -71,8 +67,4 @@ public class Level1 extends AppCompatActivity {
 
 
 
-    public void openActivity(){
-        Intent intent= new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
 }
