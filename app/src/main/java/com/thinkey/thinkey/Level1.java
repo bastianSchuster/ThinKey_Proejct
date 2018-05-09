@@ -28,10 +28,6 @@ public class Level1 extends AppCompatActivity {
         rot=(Button) findViewById(R.id.Rot);
 
 
-
-
-
-
         schwarz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
