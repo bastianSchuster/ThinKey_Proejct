@@ -18,86 +18,84 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp">
 
             <Button
                 android:id="@+id/level1"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
                 android:background="@drawable/roundedbutton"
                 android:text="1"
-                android:textSize="50dp"/>
+                android:textSize="40dp" />
 
             <Button
                 android:id="@+id/level2"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
                 android:background="@drawable/roundedbutton"
                 android:text="2"
-                android:textSize="50dp"/>
+                android:textSize="40dp" />
 
             <Button
                 android:id="@+id/level3"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
                 android:background="@drawable/roundedbutton"
                 android:text="3"
-                android:textSize="50dp"/>
+                android:textSize="40dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
-            android:layout_weight="1"
             android:orientation="horizontal"
-            tools:layout_editor_absoluteX="68dp"
-            tools:layout_editor_absoluteY="32dp">
+            android:layout_marginTop="50dp">
 
             <Button
                 android:id="@+id/level4"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
+                android:background="@drawable/roundedbutton"
                 android:text="4"
-                android:textSize="50dp"
-                android:background="@drawable/roundedbutton"/>
+                android:textSize="40dp" />
 
             <Button
                 android:id="@+id/level5"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
+                android:background="@drawable/roundedbutton"
                 android:text="5"
-                android:textSize="50dp"
-                android:background="@drawable/roundedbutton"/>
+                android:textSize="40dp" />
 
             <Button
                 android:id="@+id/level6"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
+                android:background="@drawable/roundedbutton"
                 android:text="6"
-                android:textSize="50dp"
-                android:background="@drawable/roundedbutton"/>
+                android:textSize="40dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -108,36 +106,36 @@
 
             <Button
                 android:id="@+id/level7"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
+                android:background="@drawable/roundedbutton"
                 android:text="7"
-                android:textSize="50dp"
-                android:background="@drawable/roundedbutton"/>
+                android:textSize="40dp" />
 
             <Button
                 android:id="@+id/level8"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
+                android:background="@drawable/roundedbutton"
                 android:text="8"
-                android:textSize="50dp"
-                android:background="@drawable/roundedbutton"/>
+                android:textSize="40dp" />
 
             <Button
                 android:id="@+id/level9"
-                android:layout_width="125dp"
-                android:layout_height="125dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:layout_weight="1"
+                android:background="@drawable/roundedbutton"
                 android:text="9"
-                android:textSize="50dp"
-                android:background="@drawable/roundedbutton"/>
+                android:textSize="40dp" />
         </LinearLayout>
     </LinearLayout>
 
