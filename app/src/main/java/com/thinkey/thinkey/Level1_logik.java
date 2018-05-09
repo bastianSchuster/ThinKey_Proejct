@@ -23,6 +23,33 @@ public class Level1_logik extends AppCompatActivity {
             }
         });
 
+        Button falsch1 = (Button) findViewById(R.id.falsch_11);
+        falsch1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentFalsch1 = new Intent(Level1_logik.this, GameOver.class);
+                startActivity(intentFalsch1);
+            }
+        });
+
+        Button falsch2 = (Button) findViewById(R.id.falsch_12);
+        falsch2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentFalsch2 = new Intent(Level1_logik.this, GameOver.class);
+                startActivity(intentFalsch2);
+            }
+        });
+
+        Button falsch3 = (Button) findViewById(R.id.falsch_16);
+        falsch3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentFalsch3 = new Intent(Level1_logik.this, GameOver.class);
+                startActivity(intentFalsch3);
+            }
+        });
+
     }
 
 }
