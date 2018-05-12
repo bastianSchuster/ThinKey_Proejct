@@ -8,13 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
 public class Level1 extends AppCompatActivity {
 
 
-    private Button btn;
+    private ImageButton btn;
     private Button schwarz,rot;
     int points;
 
@@ -23,15 +24,8 @@ public class Level1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
 
-
-        btn= (Button) findViewById(R.id.confirm);
         schwarz=(Button) findViewById(R.id.Schwarz);
         rot=(Button) findViewById(R.id.Rot);
-
-
-
-
-
 
         schwarz.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,13 +44,16 @@ public class Level1 extends AppCompatActivity {
             }
         });
 
-        Button back =(Button) findViewById(R.id.back);
-        back.setOnClickListener(new View.OnClickListener() {
+        btn=(ImageButton) findViewById(R.id.pause);
+        btn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                openActivity();
+            public void onClick(View v) {
+                Intent intent = new Intent(Level1.this, Pause.class);
+                startActivity(intent);
             }
         });
+
+
 
         View decorView = getWindow().getDecorView();
 
@@ -71,10 +68,4 @@ public class Level1 extends AppCompatActivity {
 
 
 
-
-
-    public void openActivity(){
-        Intent intent= new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
 }

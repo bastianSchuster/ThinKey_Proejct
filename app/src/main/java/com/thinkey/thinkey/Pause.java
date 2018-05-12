@@ -45,7 +45,8 @@ public class Pause extends Activity {
         this.continueb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Pause.this,Level.class);
+                Intent i = new Intent(Pause.this,Level2.class);
+                startActivity(i);
             }
         });
 
