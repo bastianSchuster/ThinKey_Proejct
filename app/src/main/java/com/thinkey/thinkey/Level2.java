@@ -21,6 +21,7 @@ public class Level2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level2);
 
+        final Bundle EXTRAS = getIntent().getExtras();
 
         Button btn = (Button) findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -41,7 +42,8 @@ public class Level2 extends AppCompatActivity {
         correct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Level2.this, WinnerScreen2.class);
+                Intent intent = new Intent(Level2.this, Highscore.class);
+                intent.putExtra("Points", EXTRAS.getInt("Points") + 10);
                 startActivity(intent);
             }
         });

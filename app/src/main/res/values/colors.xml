@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorThinKeyOrange">#F2994A</color>
+    <color name="colorThinKeyWelcome">#E8A93B</color>
 </resources>

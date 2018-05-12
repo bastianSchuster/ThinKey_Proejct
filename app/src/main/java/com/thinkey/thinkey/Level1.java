@@ -16,6 +16,7 @@ public class Level1 extends AppCompatActivity {
 
     private Button btn;
     private Button schwarz,rot;
+    int points;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +32,8 @@ public class Level1 extends AppCompatActivity {
         schwarz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view){
-                Intent intent = new Intent(Level1.this, WinnerScreen.class);
+                Intent intent = new Intent(Level1.this, Level2.class);
+                intent.putExtra("Points", 10);
                 startActivity(intent);
 
             }
