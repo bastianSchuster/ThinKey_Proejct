@@ -5,11 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class Level3 extends AppCompatActivity {
 
 
     Button b;
+    ImageButton pause;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +25,16 @@ public class Level3 extends AppCompatActivity {
                 startActivity(i);
             }
         });
+
+        this.pause=(ImageButton)findViewById(R.id.pause);
+        this.pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Level3.this,Pause.class);
+                startActivity(i);
+            }
+        });
+
 
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility( View.SYSTEM_UI_FLAG_LAYOUT_STABLE

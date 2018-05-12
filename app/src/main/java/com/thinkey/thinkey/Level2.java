@@ -5,16 +5,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import java.util.logging.Level;
+import android.widget.ImageButton;
 
 public class Level2 extends AppCompatActivity {
 
 
     Button correct,btn2,btn3,btn4;
-
+    ImageButton pause;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,21 +20,22 @@ public class Level2 extends AppCompatActivity {
 
         final Bundle EXTRAS = getIntent().getExtras();
 
-        Button btn = (Button) findViewById(R.id.button);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Level2.this,MainActivity.class);
-                startActivity(i);
-            }
-        });
 
 
+        this.pause = (ImageButton) findViewById(R.id.pause);
         correct = (Button) findViewById(R.id.btn2);
         btn2 = (Button) findViewById(R.id.btn);
         btn3 = (Button) findViewById(R.id.btn3);
         btn4 = (Button) findViewById(R.id.btn4);
 
+
+        this.pause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Level2.this, Pause.class);
+                startActivity(i);
+            }
+        });
 
         correct.setOnClickListener(new View.OnClickListener() {
             @Override
