@@ -10,13 +10,17 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class Level1 extends AppCompatActivity {
 
 
     private ImageButton btn;
     private Button schwarz,rot;
+    TextView tvhighscore;
     int points;
 
     @Override
@@ -26,6 +30,9 @@ public class Level1 extends AppCompatActivity {
 
         schwarz=(Button) findViewById(R.id.Schwarz);
         rot=(Button) findViewById(R.id.Rot);
+        tvhighscore = (TextView) findViewById(R.id.highscore_label_1);
+
+        tvhighscore.setText("Points: 0");
 
         schwarz.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +46,8 @@ public class Level1 extends AppCompatActivity {
         rot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Level1.this, GameOver.class);
+                Intent intent = new Intent(Level1.this, Level2.class);
+                intent.putExtra("Points", -10);
                 startActivity(intent);
             }
         });

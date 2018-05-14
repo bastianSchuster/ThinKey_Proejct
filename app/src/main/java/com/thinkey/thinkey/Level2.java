@@ -6,12 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class Level2 extends AppCompatActivity {
 
-
     Button correct,btn2,btn3,btn4;
     ImageButton pause;
+    TextView tvhighscore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +20,8 @@ public class Level2 extends AppCompatActivity {
         setContentView(R.layout.activity_level2);
 
         final Bundle EXTRAS = getIntent().getExtras();
-
-
+        tvhighscore = (TextView) findViewById(R.id.highscore_label_2);
+        tvhighscore.setText("Points: " + EXTRAS.getInt("Points"));
 
         this.pause = (ImageButton) findViewById(R.id.pause);
         correct = (Button) findViewById(R.id.btn2);
@@ -49,7 +50,8 @@ public class Level2 extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Level2.this,GameOver.class);
+                Intent intent = new Intent(Level2.this,Highscore.class);
+                intent.putExtra("Points", EXTRAS.getInt("Points") - 10);
                 startActivity(intent);
             }
         });
@@ -57,7 +59,8 @@ public class Level2 extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Level2.this, GameOver.class);
+                Intent intent = new Intent(Level2.this, Highscore.class);
+                intent.putExtra("Points", EXTRAS.getInt("Points") - 10);
                 startActivity(intent);
             }
         });
@@ -65,7 +68,8 @@ public class Level2 extends AppCompatActivity {
         btn4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Level2.this, GameOver.class);
+                Intent intent = new Intent(Level2.this, Highscore.class);
+                intent.putExtra("Points", EXTRAS.getInt("Points") - 10);
                 startActivity(intent);
             }
         });

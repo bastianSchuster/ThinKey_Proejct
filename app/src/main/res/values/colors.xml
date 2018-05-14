@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorThinKeyOrange">#F2994A</color>
     <color name="colorThinKeyWelcome">#E8A93B</color>
+    <color name="colorBlackWelcome">#000000</color>
 </resources>

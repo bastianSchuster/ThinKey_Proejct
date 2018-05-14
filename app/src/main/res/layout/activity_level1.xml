@@ -35,6 +35,14 @@
         app:layout_constraintStart_toEndOf="@+id/relativeLayout"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/highscore_label_1"
+        android:layout_width="150dp"
+        android:layout_height="25dp"
+        android:text=""
+        android:textColor="@android:color/white"
+        android:textSize="20dp" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
