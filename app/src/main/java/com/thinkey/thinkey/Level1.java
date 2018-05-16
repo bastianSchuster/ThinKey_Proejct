@@ -15,7 +15,8 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
-public class Level1 extends AppCompatActivity {
+public class
+Level1 extends AppCompatActivity {
 
 
     private ImageButton btn;

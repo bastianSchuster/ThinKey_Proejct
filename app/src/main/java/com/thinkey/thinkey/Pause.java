@@ -13,7 +13,7 @@ import java.util.logging.Level;
 
 public class Pause extends Activity {
 
-    private Button continueb,options,home;
+    private Button continueb,home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,14 +50,7 @@ public class Pause extends Activity {
             }
         });
 
-        this.options = (Button) findViewById(R.id.options);
-        this.options.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent( Pause.this, Settings.class);
-                startActivity(i);
-            }
-        });
+
 
         this.home = (Button) findViewById(R.id.home);
         this.home.setOnClickListener(new View.OnClickListener() {

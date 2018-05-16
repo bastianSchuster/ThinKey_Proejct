@@ -30,15 +30,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ImageButton settings=(ImageButton) findViewById(R.id.settings);
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentSetting = new Intent (MainActivity.this,Settings.class);
-                startActivity(intentSetting);
-            }
-        });
-        
         ImageButton play= (ImageButton) findViewById(R.id.start);
         play.setOnClickListener(new View.OnClickListener() {
             @Override

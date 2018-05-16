@@ -18,10 +18,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Level1"
-            android:screenOrientation="portrait" />
+            android:name=".Pause"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomTheme"/>
         <activity
-            android:name=".Settings"
+            android:name=".Level1"
             android:screenOrientation="portrait" />
         <activity
             android:name=".Levelauswahl"
