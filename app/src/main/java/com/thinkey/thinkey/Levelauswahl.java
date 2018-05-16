@@ -27,8 +27,17 @@ public class Levelauswahl extends AppCompatActivity {
         level2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentLevel2 = new Intent(Levelauswahl.this, GameOver.class);
+                Intent intentLevel2 = new Intent(Levelauswahl.this, Level2.class);
                 startActivity(intentLevel2);
+            }
+        });
+
+        Button level3 = (Button) findViewById(R.id.level3_button);
+        level3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentLevel3 = new Intent(Levelauswahl.this, Level3.class);
+                startActivity(intentLevel3);
             }
         });
 

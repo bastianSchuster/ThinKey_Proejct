@@ -20,7 +20,13 @@
         <activity
             android:name=".Pause"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.CustomTheme"/>
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity
+            android:name=".Pause2"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomTheme" />
+
+
         <activity
             android:name=".Level1"
             android:screenOrientation="portrait" />
@@ -49,7 +55,9 @@
             android:name=".Level1_logik"
             android:screenOrientation="portrait" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".Highscore"></activity>
+        <activity android:name=".Highscore" />
+
+
     </application>
 
 </manifest>

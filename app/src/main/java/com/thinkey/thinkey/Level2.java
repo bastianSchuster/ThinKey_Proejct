@@ -33,7 +33,8 @@ public class Level2 extends AppCompatActivity {
         this.pause.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Level2.this, Pause.class);
+                Intent i = new Intent(Level2.this, Pause2.class);
+                i.putExtra("Points", 10);
                 startActivity(i);
             }
         });

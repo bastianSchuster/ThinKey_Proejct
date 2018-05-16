@@ -11,14 +11,14 @@ import android.widget.Button;
 import java.util.Set;
 import java.util.logging.Level;
 
-public class Pause extends Activity {
+public class Pause2 extends Activity {
 
     private Button continueb,home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pausestyle);
+        setContentView(R.layout.activity_pause2);
 
 
         DisplayMetrics dm = new DisplayMetrics();
@@ -45,7 +45,8 @@ public class Pause extends Activity {
         this.continueb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Pause.this,Level1.class);
+                Intent i = new Intent(Pause2.this,Level2.class);
+                i.putExtra("Points", 10);
                 startActivity(i);
             }
         });
@@ -56,7 +57,7 @@ public class Pause extends Activity {
         this.home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Pause.this,MainActivity.class);
+                Intent i = new Intent(Pause2.this,MainActivity.class);
                 startActivity(i);
             }
         });
