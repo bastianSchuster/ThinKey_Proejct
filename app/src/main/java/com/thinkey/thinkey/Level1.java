@@ -33,7 +33,7 @@ Level1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
 
-        countDown = (TextView) findViewById(R.id.level_1_timer);
+
 
         schwarz=(Button) findViewById(R.id.Schwarz);
         rot=(Button) findViewById(R.id.Rot);
@@ -100,12 +100,12 @@ Level1 extends AppCompatActivity {
 
     public void updateCountDownText() {
 
-        countDown = (TextView) findViewById(R.id.level_1_timer);
+        countDown = (TextView) findViewById(R.id.level1timer);
 
         int seconds = (int) timeLeftMilliSeconds / 1000;
         countDown.setText(String.valueOf(seconds));
 
-        if (timeLeftMilliSeconds < 10000) {
+        if (timeLeftMilliSeconds < 11000) {
             countDown.setTextColor(Color.RED);
         } else {
             countDown.setTextColor(Color.WHITE);
