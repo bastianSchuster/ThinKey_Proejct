@@ -13,7 +13,7 @@ import java.util.logging.Level;
 
 public class Pause extends Activity {
 
-    private Button continueb,home;
+    private Button continueb,options,home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +25,39 @@ public class Pause extends Activity {
         getWindowManager().getDefaultDisplay().getMetrics(dm);
         int width= dm.widthPixels;
         int height= dm.heightPixels;
-        getWindow().setLayout((int)(width),(int)(height*1.2));
+        getWindow().setLayout((int)(width*1.0),(int)(height*1.2));
 
 
-        View decor = getWindow().getDecorView();
-        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
-        decor.setSystemUiVisibility(uiOptions);
+
+
+
+        this.continueb= (Button) findViewById(R.id.continuebutton);
+        this.continueb.setOnClickListener(new View.OnClickListener() {
+            @Override
+
+        public void onClick(View view) {
+               Intent i = new Intent(Pause.this,Level2.class);
+               startActivity(i);
+         }
+       });
+
+        this.options = (Button) findViewById(R.id.options);
+        this.options.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               Intent i = new Intent( Pause.this, Settings.class);
+                startActivity(i);
+            }
+        });
+
+        this.home = (Button) findViewById(R.id.home);
+        this.home.setOnClickListener(new View.OnClickListener() {
+            @Override
+           public void onClick(View view) {
+               Intent i = new Intent(Pause.this, MainActivity.class);
+               startActivity(i);
+            }
+        });
 
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility( View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -40,25 +67,5 @@ public class Pause extends Activity {
                 | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
                 | View.SYSTEM_UI_FLAG_IMMERSIVE);
 
-
-        this.continueb= (Button) findViewById(R.id.continuebutton);
-        this.continueb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Pause.this,Level1.class);
-                startActivity(i);
-            }
-        });
-
-
-
-        this.home = (Button) findViewById(R.id.home);
-        this.home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Pause.this,MainActivity.class);
-                startActivity(i);
-            }
-        });
     }
 }
