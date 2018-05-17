@@ -11,6 +11,12 @@ import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+
+/**
+ * @author Daniel Filipovic
+ * @version 2018-05-17
+ *
+ */
 public class WelcomeActivity extends AppCompatActivity {
 
     private TextView tl;

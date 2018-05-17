@@ -8,6 +8,12 @@
     import android.view.View;
     import android.widget.Button;
 
+
+    /**
+     * @author Bastian Schuster
+     * @version 2018-05-17
+     *
+     */
     public class WinnerScreen extends Activity{
 
         @Override

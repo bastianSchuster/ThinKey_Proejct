@@ -5,14 +5,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+
+/**
+ * @author Daniel Filipovic, Bastian Schuster
+ * @version 2018-05-17
+ *
+ */
 
 public class Levelauswahl extends AppCompatActivity {
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_levelauswahl);
+
+
+
 
         Button level1 = (Button) findViewById(R.id.level1_button);
         level1.setOnClickListener(new View.OnClickListener() {

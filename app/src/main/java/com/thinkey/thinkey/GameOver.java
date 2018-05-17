@@ -6,6 +6,13 @@ import android.support.annotation.Nullable;
 import android.util.DisplayMetrics;
 import android.view.View;
 
+
+
+/**
+ * @author Bastian Schuster
+ * @version 2018-05-17
+ *
+ */
 public class GameOver extends Activity{
 
     @Override

@@ -11,6 +11,13 @@ import android.widget.Button;
 import java.util.Set;
 import java.util.logging.Level;
 
+
+/**
+ * @author Bastian Schuster
+ * @version 2018-05-17
+ *
+ */
+
 public class Pause2 extends Activity {
 
     private Button continueb,home;
