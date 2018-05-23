@@ -59,7 +59,7 @@ public class Levelauswahl extends AppCompatActivity {
         lvl4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intentLevel4= new Intent(Levelauswahl.this,Level4_full.class);
+                Intent intentLevel4= new Intent(Levelauswahl.this,Level4.class);
                 startActivity(intentLevel4);
             }
         });
