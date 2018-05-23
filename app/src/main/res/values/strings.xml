@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ThinKey</string>
     <string name="title_activity_main2">Main2Activity</string>
+
+    <string name="title_activity_level4_full">Level4_full</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <string name="title_activity_level1">Level1</string>
 </resources>

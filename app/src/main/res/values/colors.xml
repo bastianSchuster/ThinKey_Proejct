@@ -6,4 +6,6 @@
     <color name="colorThinKeyOrange">#F2994A</color>
     <color name="colorThinKeyWelcome">#E8A93B</color>
     <color name="colorBlackWelcome">#000000</color>
+
+    <color name="black_overlay">#66000000</color>
 </resources>

@@ -1,24 +1,17 @@
 package com.thinkey.thinkey;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.Canvas;
 import android.graphics.Color;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.RadioButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.w3c.dom.Text;
+public class Level1 extends AppCompatActivity {
 
-public class
-Level1 extends AppCompatActivity {
 
     private CountDownTimer countDownTimer;
     private TextView countDown;
@@ -32,8 +25,6 @@ Level1 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
-
-
 
         schwarz=(Button) findViewById(R.id.Schwarz);
         rot=(Button) findViewById(R.id.Rot);
@@ -100,7 +91,7 @@ Level1 extends AppCompatActivity {
 
     public void updateCountDownText() {
 
-        countDown = (TextView) findViewById(R.id.level1timer);
+        TextView countDown = (TextView) findViewById(R.id.level1timer);
 
         int seconds = (int) timeLeftMilliSeconds / 1000;
         countDown.setText(String.valueOf(seconds));

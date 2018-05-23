@@ -25,11 +25,6 @@
             android:name=".Pause2"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomTheme" />
-
-
-        <activity
-            android:name=".Level1"
-            android:screenOrientation="portrait" />
         <activity
             android:name=".Levelauswahl"
             android:screenOrientation="portrait" />
@@ -56,8 +51,12 @@
             android:screenOrientation="portrait" />
         <activity android:name=".MainActivity" />
         <activity android:name=".Highscore" />
-
-
+        <activity
+            android:name=".Level4_full"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_level4_full"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".Level1"></activity>
     </application>
 
 </manifest>

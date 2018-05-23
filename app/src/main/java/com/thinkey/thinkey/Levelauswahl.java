@@ -55,6 +55,15 @@ public class Levelauswahl extends AppCompatActivity {
             }
         });
 
+        Button lvl4 = (Button) findViewById(R.id.level4_button);
+        lvl4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intentLevel4= new Intent(Levelauswahl.this,Level4_full.class);
+                startActivity(intentLevel4);
+            }
+        });
+
         View decorView = getWindow().getDecorView();
         decorView.setSystemUiVisibility( View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                 | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
